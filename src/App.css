@@ -1,0 +1,65 @@
+.app {
+  text-align: center;
+}
+
+.homeButton:hover {
+  font-weight: 800;
+  font-size: large;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.cont {
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: aliceblue;
+}
+
+.main-head {
+  background-color: white;
+  border-radius: 100%;
+  padding: 80px;
+}
+
+.homeButton {
+  margin-right: 10px;
+}
+
+/* AppBar styles */
+AppBar {
+  background-color: #2196f3;
+}
+
+/* Paper (container) styles */
+Paper {
+  background-color: #e0e0e0; /* Change the background color here */
+}
+
+/* Button styles */
+Button {
+  text-transform: none;
+  font-weight: bold;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .app {
+    padding: 10px;
+  }
+}

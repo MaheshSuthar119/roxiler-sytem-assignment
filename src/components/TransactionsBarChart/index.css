@@ -1,0 +1,16 @@
+
+.month {
+    font-weight: 900;
+}
+.bar {
+    width: 1200px;
+    height: 900px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .bar {
+        width: 370px;
+        height: 900px;
+    }    
+ }

@@ -1,0 +1,111 @@
+.cardcontainer {
+    padding: 30px;
+    background-color: aliceblue;
+}
+
+.selectsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.input:hover {
+    font-weight: 700;
+    width: 330px;
+    border-width: 4px;
+}
+
+.inputst {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    margin: 10px;
+    padding: 0px;
+    font-weight: 700;
+    border-width: 2px;
+    border-radius: 20px;
+}
+.inputst:hover {
+    font-weight: 900;
+    width: 330px;
+    border-width: 6px;
+    color: rgb(26, 115, 204);
+}
+
+.table-display {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; 
+    background-color: rgb(233, 209, 73);
+    text-align: center;
+    border-radius: 20px;
+  }
+  
+  .table-display th, .table-display td {
+    border: 2px solid ;
+    padding: 10px;
+    text-align: left;
+    border-radius: 20px;
+  }
+   
+  .table-display tr:hover {
+    font-weight: 600;
+  }
+  tr {
+    text-align: center;
+  }
+  .image {
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+  }
+
+.Statistics {
+    background-color: rgb(233, 209, 73);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .Statistics h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .Statistics h1 span {
+    color: #06406f;
+    margin-left: 10px; 
+  }
+  
+  .Statistics h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+ 
+  }
+  
+  .Statistics h3 span {
+    font-weight: bold;
+    color: #0e5a10;
+    margin-left: 10px;  
+  }
+  
+
+
+  @media screen and (max-width: 768px) {
+    .table-display {
+        font-size: 4px; 
+      }
+    .image {
+        height: 80px;
+        width: 80px;
+        border-radius: 10px;
+      }
+      .inputst {
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        margin: 10px;
+        padding: 0px;
+    } 
+}
