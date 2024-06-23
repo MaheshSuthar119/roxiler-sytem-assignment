@@ -1,16 +1,43 @@
 const mongoose = require("mongoose");
-const schema = mongoose.Schema;
+const { Schema } = mongoose;
 
-const ApiData = new schema({
-  productId: Number,
-  productTitle: String,
-  productPrice: Number,
-  productDescription: String,
-  productCategory : String,
-  productImage: String,
-  productSold : Boolean,
-  dateOfSale: Date,
-})
+const ApiDataSchema = new Schema({
+  productId: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
+  productTitle: {
+    type: String,
+    required: true,
+  },
+  productPrice: {
+    type: Number,
+    required: true,
+  },
+  productDescription: {
+    type: String,
+    required: true,
+  },
+  productCategory: {
+    type: String,
+    required: true,
+  },
+  productImage: {
+    type: String,
+    required: true,
+  },
+  productSold: {
+    type: Boolean,
+    required: true,
+  },
+  dateOfSale: {
+    type: Date,
+    required: true,
+  },
+});
 
-const TransactionModel = mongoose.model("data", ApiData);
+// Specifying a collection name
+const TransactionModel = mongoose.model("Transaction", ApiDataSchema, "transactions");
+
 module.exports = TransactionModel;
