@@ -1,65 +1,117 @@
-.app {
-  text-align: center;
-}
-
-.homeButton:hover {
-  font-weight: 800;
-  font-size: large;
-}
-
+/* General styles */
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
 }
-.cont {
-  margin: 0;
-  margin: 0;
-  padding: 0;
-  background-color: aliceblue;
-}
+
 .app {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 50px;
+  background-color: #ffffff;
+  text-align: left;
+  border: 2px solid #ccc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cont {
+  margin: 20px;
   padding: 20px;
-  background-color: aliceblue;
+  background-color: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Header styles */
 .main-head {
-  background-color: white;
-  border-radius: 100%;
-  padding: 80px;
+  background-color: #80f92f;
+  border-radius: 0;
+  padding: 60px;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
+/* Button styles */
 .homeButton {
   margin-right: 10px;
+  font-weight: normal;
+  font-size: medium;
+  padding: 10px 20px;
+  background-color: #80f92f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.homeButton:hover {
+  font-weight: bold;
+  font-size: large;
+  background-color: #388e3c;
 }
 
 /* AppBar styles */
 AppBar {
-  background-color: #2196f3;
+  background-color: #673ab7;
+  padding: 10px 20px;
+  color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Paper (container) styles */
 Paper {
-  background-color: #e0e0e0; /* Change the background color here */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Button styles */
 Button {
-  text-transform: none;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #03a9f4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+Button:hover {
+  background-color: #0288d1;
 }
 
 /* Dark mode styles */
 .dark-mode {
-  background-color: #333;
-  color: #fff;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
 }
 
 /* Responsive styles */
 @media (max-width: 600px) {
   .app {
-    padding: 10px;
+    padding: 20px;
+  }
+
+  .homeButton {
+    font-size: small;
+    padding: 8px 16px;
+  }
+
+  .main-head {
+    padding: 40px;
+  }
+
+  AppBar {
+    padding: 8px 16px;
+  }
+
+  Button {
+    padding: 8px 16px;
   }
 }
+
+ 

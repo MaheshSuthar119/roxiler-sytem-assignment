@@ -35,67 +35,21 @@ export const options = {
   },
 };
 
-const BarChart = (props) => {
-  const [barChartData, setBarChartData] = useState({});
-  const [data, setData] = useState([]);
-  const [lab, setLab] = useState([]);
+const BarChart = () => {
+  const [chartData, setChartData] = useState({ labels: [], datasets: [] });
   const [month, setMonth] = useState("March");
-  
 
   useEffect(() => {
-    async function fetchBarChartData() {
+    const fetchBarChartData = async () => {
       try {
         const response = await axios.get(`${API}/bar-chart/${month}`);
-        console.log(response.data.result);
+        const result = response.data.result;
 
-        // Set state variables directly from the response
-        setBarChartData(response.data.result);
-        setLab(Object.keys(response.data.result));
-        setData(Object.values(response.data.result));
+        const labels = Object.keys(result);
+        const data = Object.values(result);
 
-        console.log(lab);
-        console.log(barChartData);
-      } catch (error) {
-        console.error("Error fetching bar chart data", error);
-      }
-    }
-
-    fetchBarChartData();
-  }, [month]);
-
-  return (
-    <div>
-      <div className="cardgraphcontainer">
-        <div className="select">
-        
-          <select className="inputst" onChange={(e) => setMonth(e.target.value)}>
-            {/* Use defaultValue instead of selected */}
-            <option value={"January"}>January</option>
-            <option value={"February"}>February</option>
-            <option value={"March"} selected>
-              March
-            </option>
-            <option value={"April"}>April</option>
-            <option value={"May"}>May</option>
-            <option value={"June"}>June</option>
-            <option value={"July"}>July</option>
-            <option value={"August"}>August</option>
-            <option value={"September"}>September</option>
-            <option value={"October"}>October</option>
-            <option value={"November"}>November</option>
-            <option value={"December"}>December</option>
-          </select>
-        </div>
-      </div>
-      <h1>
-        Bar Cart Stats-<span className="month">{month}</span>
-      </h1>
-      
-      <div className="bar">
-      <Bar 
-        options={options}
-        data={{
-          labels: lab,
+        setChartData({
+          labels: labels,
           datasets: [
             {
               label: "Number of Items",
@@ -103,11 +57,37 @@ const BarChart = (props) => {
               backgroundColor: "lightblue",
             },
           ],
-        }}
-      />
+        });
+      } catch (error) {
+        console.error("Error fetching bar chart data", error);
+      }
+    };
+
+    fetchBarChartData();
+  }, [month]);
+
+  return (
+    <div>
+      <div className="card-graph-container">
+        <div className="select">
+          <select className="input" value={month} onChange={(e) => setMonth(e.target.value)}>
+            {["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"].map((m) => (
+              <option key={m} value={m}>{m}</option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <h1>
+        Bar Chart Stats - <span className="month">{month}</span>
+      </h1>
+      <div className="bar">
+        <Bar options={options} data={chartData} />
       </div>
     </div>
   );
-}
+};
 
 export default BarChart;
+
+
+ 
