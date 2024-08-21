@@ -10,7 +10,7 @@ collection structure
 ## Frontend Task
 By using above created apis, create the following table and charts on single page.
 
-VIDEO: [VIDEO.mp4](https://github.com/user-attachments/assets/eb184c1d-e8d7-473f-9833-45ccf380f5c6)
+VIDEO: https://github.com/user-attachments/assets/eb184c1d-e8d7-473f-9833-45ccf380f5c6
 
  
  
